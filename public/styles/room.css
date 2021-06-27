@@ -1,0 +1,197 @@
+.content{
+    max-width: min(112rem,90%);
+}
+
+/*Header =================================================================*/
+
+#room header{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+#room header .buttons{
+    display: flex;    
+}
+
+#room header .buttons .button:nth-child(1){
+    margin-right: 0.8rem;
+    padding: 1.3rem 1.6rem;
+
+}
+
+#room header .buttons .button:nth-child(1) img{
+    margin-left: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+
+}
+
+#room header .buttons .button:nth-child(2){
+    margin-right: 0.8rem;
+    padding: 1.3rem 3.2rem;
+    white-space: nowrap;
+
+}
+
+#room header .buttons .button:nth-child(2) img{
+    margin-right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    
+}
+
+/*Question form =================================================================*/
+
+#question-form h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 4.2rem;
+}
+
+#question-form form{
+    border: .2rem solid var(--grey_blue);
+    padding: 1.6rem;
+    border-radius: 0 .8rem .8rem .8rem;
+    margin-top: 2.4rem;
+    margin-bottom: 1.6rem;
+}
+
+#question-form form textarea{
+    width: 100%;
+    background: transparent;
+    
+    outline: none;
+    resize: none;
+}
+
+#question-form form textarea::placeholder{
+    color: var(--grey_blue);
+
+}
+
+#question-form form footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#question-form form footer > div{ /*> garante que só os filhos recebam as propriedades, não os netos*/
+    padding:0 0 .8rem 0;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+
+    color: var(--iconsAndDetails);
+}
+
+#question-form form footer > div img{
+    margin-right: .6rem;    
+}
+
+#question-form form footer button{
+    height: auto;
+    padding: .8rem 2.4rem;
+    line-height: 2.4rem;
+
+}
+
+/*Question wrapper =================================================================*/
+
+.question-wrapper {
+    border-radius: 0 .8rem .8rem .8rem  ;
+
+    min-height: 13.3rem;
+    background: var(--light_blue);
+
+    margin-bottom: 0.8rem;
+    padding: 2.4rem 3.2rem 2.5rem 2.4rem;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.question-wrapper .question-content{
+    display: flex;
+    align-items: flex-start;
+    color: var(--black);
+
+}
+
+.question-content .user{
+    clip-path: circle();
+    background: var(--blue);
+    padding: 1.4rem;
+}
+
+.question-wrapper .question-content p{
+    margin-left: 1.6rem;
+    word-break: break-word;
+
+    display: flex;
+    align-items:center;
+
+}
+
+.question-wrapper .actions {
+    display: flex;
+    justify-content: flex-end;
+
+    color: var(--grey_grey);   
+}
+
+.question-wrapper .actions > a{
+    display: flex;
+}
+
+.question-wrapper .actions > a + a { /*seleciona o irmão*/
+    margin-left: 2.4rem;
+}
+
+.question-wrapper .actions > a > img{ 
+    margin-right: .6rem;   
+}
+
+/*Question wrapper -- Read =================================================================*/
+
+.question-wrapper.read {
+    background: var(--questionRead);
+}
+
+.question-wrapper.read .question-content .user{
+    background: var(--grey_blue);
+}
+
+
+/*No Questions =================================================================*/
+
+.noQuestions{
+    text-align: center;
+    margin-top: 5.2rem;
+}
+
+.noQuestions img{
+    max-width: 100%;
+    margin-bottom: 1.6rem;
+}
+
+.noQuestions p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.noQuestions p+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    line-height:1.8rem;
+    margin-top: 1.3rem;
+
+}

@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+html{
+    --black: #0D114F;
+    --white: #FAFAFA;
+    --light_blue: #E0ECFF;
+    --blue: #3485FF;
+    --red: #E83F5B;
+
+    --background: #FBFCFF;
+    --overlay: #040911d0;
+    --iconsAndDetails: #A5B0C1;
+    --questionRead: #eaecf2;
+
+    --grey_grey: #4D5E77;
+    --grey_blue: #A1B2CD;
+    --grey_Medium: #A1B2CD;
+    --grey_light: #E5EAF1;
+    
+
+    font-size: 62.5%; /*converte o rem de 16px pra 10px*/
+}
+
+body{
+    display: flex;  
+    height: 100vh;
+    background: var(--background);
+}
+
+body, button, input, textarea {
+    font-size:clamp(14px,1.6rem, 2vw);  /*clamp é o intervalo de tamanho. O tamanho minimo é o primeiro valor, o padrão é o segundo, o ultimo é o tamanho maximo*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px 1px;
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0px;
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Imput and buttons */ 
+input, button, .button{
+    height: 5rem;
+    border-radius: .8rem;
+}
+
+button, .button{
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--blue);
+    color: var(--white);
+
+    transition: filter .2s;
+    
+    cursor: pointer;
+}
+
+button:hover, .button:hover{
+    filter: brightness(1.2); /* aplica um filtro de brightness sobre o objeto */
+}
+
+button > img 
+.button > img{
+    margin: right 1rem;
+    width: 2rem;
+
+}
+
+button.outlined, .button.outlined{
+    background: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+}
+
+button.red{
+    background: var(--red);
+    color: var(var(--white));
+}
+
+.button.grey{
+    background: var(--grey_light);
+    color: var(--grey_grey);
+}
+
+
+/* Header =================================================================*/ 
+
+.content header{
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content.header img{
+    width: 16.7rem;
+}
